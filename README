@@ -1,10 +1,12 @@
-ABOUT
-#####
+#######
+#ABOUT#
+#######
 
 This script is designed to kill Amazon EC2 instances that are over a certain age
 
-USAGE
-#####
+#######
+#USAGE#
+#######
 
 ./killer.sh [kill hours] [warn hours]
 
@@ -15,8 +17,9 @@ eg
 This will terminate instances that were launched over 72 hours ago, and warn re. instances that were launched over 48 hours
 ago
 
-REQUIREMENTS
-############
+##############
+#REQUIREMENTS#
+##############
 
 jsawk
 https://github.com/micha/jsawk
