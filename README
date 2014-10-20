@@ -1,0 +1,27 @@
+ABOUT
+#####
+
+This script is designed to kill Amazon EC2 instances that are over a certain age
+
+USAGE
+#####
+
+./killer.sh [kill hours] [warn hours]
+
+eg
+
+./killer.sh 72 48
+
+This will terminate instances that were launched over 72 hours ago, and warn re. instances that were launched over 48 hours
+ago
+
+REQUIREMENTS
+############
+
+jsawk
+https://github.com/micha/jsawk
+
+Spidermonkey js interpreter
+https://developer.mozilla.org/en-US/docs/Mozilla/Projects/SpiderMonkey
+
+Script must be run from Amazon EC2 instanace which has IAM Role with permissions to Describe and Terminate instances
