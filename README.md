@@ -40,7 +40,7 @@ https://developer.mozilla.org/en-US/docs/Mozilla/Projects/SpiderMonkey
 
 Usage:
 
-`./killer.sh <terminate interval> <warn interval>``
+`./killer.sh <terminate interval> <warn interval>`
 
 eg
 
