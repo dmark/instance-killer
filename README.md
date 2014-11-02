@@ -2,6 +2,8 @@
 
 Bash and Python script to kill Amazon EC2 instances based on elapsed time since launch. Allows for warnings and dry runs. Use with care.
 
+***TERMINATE EXECUTABLE NEEDS TO BE UNCOMMENTED IN THE SCRIPTS***
+
 ## Python
 
 Requirements:
