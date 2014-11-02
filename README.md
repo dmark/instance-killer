@@ -7,12 +7,13 @@ Bash and Python script to kill Amazon EC2 instances based on elapsed time since 
 Requirements:
 
 You need Amazon CLI boto module
+
 `pip install boto`
 
 https://github.com/boto/boto
 
 Usage:
-python killer.py <terminate interval> <warn interval> <region> [dry-run]
+``python killer.py <terminate interval> <warn interval> <region> [dry-run]`
 
 eg
 
@@ -38,11 +39,11 @@ https://developer.mozilla.org/en-US/docs/Mozilla/Projects/SpiderMonkey
 
 Usage:
 
-./killer.sh <terminate interval> <warn interval>
+`./killer.sh <terminate interval> <warn interval>``
 
 eg
 
-./killer.sh 72 48
+`./killer.sh 72 48`
 
 Amazon CLI environment variables must be set as normal for use with Amazon CLI
 
