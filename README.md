@@ -13,7 +13,8 @@ You need Amazon CLI boto module
 https://github.com/boto/boto
 
 Usage:
-``python killer.py <terminate interval> <warn interval> <region> [dry-run]`
+
+`python killer.py <terminate interval> <warn interval> <region> [dry-run]`
 
 eg
 
