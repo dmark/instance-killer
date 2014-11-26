@@ -71,7 +71,7 @@ for r in reservations:
                  #print "Terminating %s %s..." % (i.id,name)
                  status = ec2.get_instance_attribute(i.id,"disableApiTermination")
                  if status["disableApiTermination"] == False:
-                     ec2.terminate_instances(instance_ids=[i.id])
+                     #ec2.terminate_instances(instance_ids=[i.id])
 
          elif (now - t) > delta_warn:
              warn.append("%s %s\n" % (i.id,name))
