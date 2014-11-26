@@ -21,7 +21,7 @@ message = "Subject: Auto-termination of AWS Build instances\n\n"
 dry_run = False
 
 #EXEMPTED SUBNETS
-exempt = ["subnet-738e8e35","subnet-58f7aa1e","subnet-59f7aa1f","subnet-81c414e4","subnet-7037cf07","subnet-733de516","subnet-fa7fdf9f","subnet-c77cbbb0","subnet-d6ff5fb3","subnet-1720d460"]
+exempt = []
 
 if len(a) < 4:
     print"Usage: python killer.py <terminate interval> <warn interval> <region> <email> [dry-run]"
@@ -30,8 +30,6 @@ if len(a) < 4:
 if a[-1] == "dry-run":
     message += "###DRY RUN###\n\n"
     dry_run = True
-
-message += "https://mttnow.atlassian.net/wiki/display/DEV/Auto-termination+of+instances\n\n"
     
 message += "Terminating older than %s hour(s) old; Warning older than %s hour(s) old\n\n" % (a[1],a[2])
 
