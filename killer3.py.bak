@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python2
 # killer3.py - terminate long running EC2 instances
 
 """killer3.py
@@ -68,19 +68,19 @@ def main():
     response = ec2.describe_instances()
 
     warn_instances = []
-    for reservation in response['Reservations']:
-        for instance in reservation['Instances']:
-            launchtime = instance['LaunchTime']
+    for reservation in response[u'Reservations']:
+        for instance in reservation[u'Instances']:
+            launchtime = instance[u'LaunchTime']
             if launchtime < delta_kill and args.yes:
-                print("Terminating instance", instance['InstanceId'])
+                print "Terminating instance", instance[u'InstanceId']
                 #ec2.terminate_instances(InstanceIds=[instance[u'InstanceId']])
             elif launchtime < delta_kill and not args.yes:
-                print("Skipping instance", instance['InstanceId'])
+                print "Skipping instance", instance[u'InstanceId']
             elif launchtime < delta_warn:
                 warn_instances += instance
 
     if warn_instances:
-        print("The following instances are more than ", args.warn, "hrs old.")
+        print "The following instances are more than ", args.warn, "hrs old."
         pp.pprint(warn_instances)
 
 
